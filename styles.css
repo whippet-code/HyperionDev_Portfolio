@@ -1,0 +1,393 @@
+/* Reset any browser preset spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main styles */
+h1 {
+  color: rgb(120, 50, 50);
+  font-weight: 800;
+  font-variant-caps: petite-caps;
+  font-size: 3rem;
+  opacity: 0.9;
+}
+
+h2,
+p {
+  color: rgb(30, 10, 10);
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+h3 {
+  color: rgb(230, 150, 150);
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* Background, using flex to allow ease of position */
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, rgb(215, 120, 120), rgb(245, 230, 230));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Create the see-thru styled main holder */
+.glass {
+  background: white;
+  min-height: 80vh;
+  width: 80vw;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  border-radius: 1.5rem;
+  z-index: 3;
+  backdrop-filter: blur(1rem);
+  display: flex;
+}
+
+/* restyle for smll screen */
+@media only screen and (max-width: 1000px) {
+  main {
+    min-height: 100vh;
+    min-width: 200px;
+    background: linear-gradient(to right top, rgb(215, 120, 120), rgb(245, 230, 230));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .glass {
+    background: white;
+    min-height: 80vh;
+    width: 90vw;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    border-radius: 1.5rem;
+    z-index: 3;
+    backdrop-filter: blur(1rem);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+
+.link {
+  display: flex;
+  margin: 1rem 1rem;
+  padding: 0rem 0.5rem;
+  align-items: center;
+}
+
+.link h2 {
+  padding: 0rem 2rem;
+}
+
+.link img {
+  width: 30px;
+  height: 30px;
+}
+
+#port {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.sayhi {
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  border-radius: 1rem;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  width: 60%;
+  height: 5rem;
+  /* pos: rel so that the image can be positioned "relative" to it */
+  position: relative;
+  box-shadow: 5px 5px 10px rgba(59, 59, 59, 0.1);
+}
+
+.sayhi img {
+  /* pos:abs working relative to its container now .sayhi */
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.sayhi h2 {
+  color: rgb(59, 59, 59);
+}
+
+/* Getting rid of the link underlining for say hi - via w3schools.org */
+.sayhi a {
+  text-decoration: none;
+}
+
+.sayhi a:link {
+  text-decoration: none;
+}
+
+.sayhi a:visited {
+  text-decoration: none;
+}
+
+.sayhi a:hover {
+  text-decoration: none;
+}
+
+.sayhi a:active {
+  text-decoration: none;
+}
+
+/* background elements */
+.circle1,
+.circle2 {
+  background: white;
+  background: linear-gradient(to right bottom, rgba(255, 175, 175, 0.8), rgba(255, 175, 175, 0.2));
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle1 {
+  bottom: 3%;
+  left: 3%;
+}
+
+.circle2 {
+  right: 5%;
+  top: 2%;
+}
+
+/* Left side (links etc.) style and spacing via flex */
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  border-radius: 1.5rem;
+}
+
+.dashboard-port {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2.5rem;
+  text-align: center;
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+  border-radius: 1.5rem;
+}
+
+/* right-side styles */
+.info {
+  margin: 1rem 3rem;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card {
+  display: flex;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  border-radius: 1rem;
+  margin: 1rem 0rem;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+  justify-content: space-between;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.cards {
+  text-align: right;
+  text-decoration: none;
+}
+
+.cards a {
+  text-decoration: none;
+}
+
+.cards a:link {
+  text-decoration: none;
+}
+
+.cards a:visited {
+  text-decoration: none;
+}
+
+.cards a:hover {
+  text-decoration: none;
+}
+
+.cards a:active {
+  text-decoration: none;
+}
+
+.card-portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+  border-radius: 1rem;
+  margin: 1rem 0rem;
+  padding: 3rem;
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+  text-align: center;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+#portfolio1,
+#portfolio2,
+#portfolio3 {
+  width: 80%;
+  border-radius: 50%;
+  opacity: .85;
+  border: 3px solid rgba(255, 232, 232, 0.7);
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+}
+
+.portfolio-item {
+  width: 100%;
+  min-width: 30%;
+  border-radius: 0.5rem;
+  opacity: .9;
+  border: 3px solid rgba(255, 232, 232, 0.7);
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+}
+
+.progress {
+  background: linear-gradient(to right top, rgb(215, 120, 120), rgb(245, 210, 210));
+  width: 100%;
+  height: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+}
+
+/* little psuedo element(9div) added via CSS rather than in HTML, used to hide some of progress bar ;) */
+.progress::after {
+  /* makes it appear */
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(250, 245, 245, 0.9);
+  position: absolute;
+  left: 45%;
+}
+
+.percentage {
+  padding: 1rem 1rem 1rem 1rem;
+  color: rgb(30, 10, 10);
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+/* Contact Page */
+
+.card-form {
+  display: flex;
+  background: linear-gradient(to left top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5));
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+  text-align: left;
+  width: 80%;
+}
+
+.form {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+textarea {
+  max-width: 80%;
+}
+
+.submit {
+  color: whitesmoke;
+  background: linear-gradient(to left top, rgba(255, 150, 150, 0.9), rgba(255, 150, 150, 0.5));
+  width: 50%;
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  border: 1px solid rgba(250, 220, 220, 0.6);
+  box-shadow: 5px 5px 10px rgba(120, 45, 45, 0.2);
+}
+
+:hover.submit {
+  background: linear-gradient(to left top, rgba(255, 150, 150, 1), rgba(255, 150, 150, 0.8));
+}
+
+/* About page styles */
+
+.tech {
+  display: flex;
+
+}
+
+.tech ul {
+  flex: 1;
+  text-align: left;
+}
+
+.tech li {
+  padding: 0.2rem 0.6rem;
+}
+
+.tech h2 {
+  text-align: left;
+  flex: 1;
+  font-weight: 600;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: separate;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  border-bottom: 2px solid rgba(255, 175, 175, 0.8);
+  text-align: left;
+}
+
+tr:hover {
+  background-color: rgba(255, 105, 105, 0.1);
+}
+
+ul {
+  list-style-type: none;
+}
