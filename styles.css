@@ -31,7 +31,7 @@ h3 {
 /* Background, using flex to allow ease of position */
 main {
   min-height: 100vh;
-  background: linear-gradient(to right top, rgb(215, 120, 120), rgb(245, 230, 230));
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,7 @@ main {
   z-index: 3;
   backdrop-filter: blur(1rem);
   display: flex;
+  box-shadow: 5px 5px 15px rgba(130, 130, 130, 0.3);
 }
 
 /* restyle for smll screen */
@@ -390,4 +391,43 @@ tr:hover {
 
 ul {
   list-style-type: none;
+}
+
+/* likes & saves */
+
+.yesLike {
+  border-radius: 25%;
+  background-color: rgba(255, 150, 150, 0.5);
+}
+
+.yesSave {
+  border-radius: 25%;
+  background-color: rgba(255, 150, 150, 0.5);
+}
+
+/* Saved Page */
+.saveHolder {
+  width: 75%;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: rgb(245, 230, 230);
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.savedImage {
+
+  width: 80%;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to left top, rgba(255, 225, 225, 0.9), rgba(255, 225, 225, 0.5));
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
+  text-align: left;
+  width: 80%;
 }
