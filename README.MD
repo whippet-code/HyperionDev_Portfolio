@@ -6,3 +6,5 @@ Items stored to session storage arrays, saved page build from the saved array. N
 Contact page & comments section to saved page added with confirmation of submit.
 
 Restyled site, and polished up a couple of other bits.
+
+TODO - Folder/structure tidy. Liked projects store/rebuild. CV link
