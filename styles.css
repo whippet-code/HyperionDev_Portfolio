@@ -300,7 +300,7 @@ main {
   height: 100%;
   background: rgba(250, 245, 245, 0.9);
   position: absolute;
-  left: 45%;
+  left: 65%;
 }
 
 .percentage {
@@ -325,12 +325,29 @@ main {
 }
 
 .form {
-  max-width: 75%;
+  max-width: 90%;
   margin: 0 auto;
+  padding: 1rem;
+}
+
+#name,
+#email,
+#option {
+  background: rgb(245, 230, 230);
+  border: 1px dashed lightgray;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form label {
+  padding-bottom: 1rem;
 }
 
 textarea {
-  max-width: 80%;
+  width: 100%;
+  background: rgb(245, 230, 230);
+  border: 1px dashed lightgray;
 }
 
 .submit {
@@ -344,6 +361,8 @@ textarea {
   margin-top: 1rem;
   border: 1px solid rgba(250, 220, 220, 0.6);
   box-shadow: 5px 5px 10px rgba(120, 45, 45, 0.2);
+  width: 100%;
+  height: 3rem;
 }
 
 :hover.submit {
@@ -410,13 +429,17 @@ ul {
   width: 75%;
   padding: 1rem;
   margin: 0 auto;
-  background-color: rgb(245, 230, 230);
+  background: linear-gradient(to left top, rgba(255, 225, 225, 0.9), rgba(255, 225, 225, 0.5));
   border-radius: 1rem;
   margin-bottom: 1rem;
 }
 
-.savedImage {
+.info h3 {
+  text-align: center;
+}
 
+.savedImage {
+  margin-right: 3.5rem;
   width: 80%;
 }
 
@@ -428,6 +451,35 @@ ul {
   margin: 0 auto;
   padding: 2rem;
   box-shadow: 6px 6px 20px rgba(130, 130, 130, 0.2);
-  text-align: left;
-  width: 80%;
+  width: 75%;
+  text-align: center;
+}
+
+#comments {
+  margin: 0 auto;
+  background: rgb(255, 240, 240);
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem;
+  border: 1px dashed lightgray;
+  color: gray;
+  text-align: right;
+  font-size: 12pt;
+}
+
+.comments input {
+  width: 20rem;
+  height: 3rem;
+  margin: 0 auto;
+  background: rgb(255, 240, 240);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18pt;
+  font-weight: 100;
+  border: 1px dashed lightgray;
+}
+
+.comments input:hover {
+  box-shadow: 2px 2px 10px lightgray;
+  color: white;
+  background: rgb(235, 210, 210);
+  transition: 0.5s ease;
 }

@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
   <title>Mark Ivkovic - Development Portfolio</title>
 </head>
-<body>
+<body onload="buildSaved()">
   <main>
     <section class="glass">
       <div class="dashboard-port">
@@ -49,9 +49,9 @@
         <form class="card-form comments">
           <label for="text">Comments</label>
           
-          <textarea name="comments" id="comments" cols="80" rows="4"></textarea>
+          <textarea name="comments" id="comments" cols="80" rows="5"></textarea>
           
-          <button type="submit" class="submit">Submit</button>
+          <input type="button" value="Submit" onclick="confirmComments()">
         </form>
       </div>
     </section>

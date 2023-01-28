@@ -1,39 +1,36 @@
+let likedArr = [];
+let savedArr = [];
 
-let savedArr;
-let likedArr;
 
-// getStore & setStore functions
 // Check if arrays exist in storage yet (savedArr & likedArr)
-// likedStore load into arr
-if (sessionStorage.getItem('likedSave') == null) {
+// if not, declare arrays and store
+if (sessionStorage.getItem('alreadyLoaded') === null) {
   // not exists, declare arr and save to ss
   sessionStorage.setItem('likedSave', JSON.stringify(likedArr));
-} else {
-  likedArr = JSON.parse(sessionStorage.getItem('likedSave'));
-}
-// savestore loaded to arr
-if (sessionStorage.getItem('savedSave') == null) {
-  // not exists, declare arr and save to ss
+
   sessionStorage.setItem('savedSave', JSON.stringify(savedArr));
+
+  // set 'alreadyLoaded' to true
+  sessionStorage.setItem('alreadyLoaded', true);
 } else {
+  // else load the arrays from session storage
+  likedArr = JSON.parse(sessionStorage.getItem('likedSave'));
   savedArr = JSON.parse(sessionStorage.getItem('savedSave'));
 }
 
+// getStore func to retrieve stored arrays
 const getStore = () => {
   likedArr = JSON.parse(sessionStorage.getItem('likedSave'))
-  savedArr = JSON.parse(sessionStorage.getItem('savedStore'))
+  savedArr = JSON.parse(sessionStorage.getItem('savedSave'))
 }
 
-// Check if arrays exist in storage yet (savedArr & likedArr)
-getStore();
 
 // Setstore func to save arrays to session storage
 const setStore = () => {
   sessionStorage.setItem('likedSave', JSON.stringify(likedArr))
-  sessionStorage.setItem('savedStore', JSON.stringify(savedArr))
+  sessionStorage.setItem('savedSave', JSON.stringify(savedArr))
 }
 
-setStore();
 
 // object containing all the image urls (for later ref)
 const images = {
@@ -61,6 +58,7 @@ likes.forEach(like => {
     if(e.target.classList.contains("yesLike")) {
       //push element
       likedArr.push(e.target)
+      
     }
     // else remove from liked array
     else {
@@ -85,8 +83,8 @@ saves.forEach(save => {
     // load array from store
     getStore()
     // if not saved - add to saved array
-    if(e.target.classList.contains("yesSave")) {      
-      savedArr.push(e.target.parentElement.id)      
+    if(e.target.classList.contains("yesSave")) {    
+      savedArr.push(e.target.parentElement.id)     
     }
     // else remove from saved array
     else {
@@ -95,6 +93,7 @@ saves.forEach(save => {
     }
     // Save arr to storeage
     setStore()
+    alert(`You now have ${savedArr.length} items saved.`)
   })
 })
 
@@ -104,21 +103,41 @@ saves.forEach(save => {
 // position in saved page to put each saved element
 const savesHere = document.querySelector('#saves');
 
-//itterate the saved Array and forEach entry create and append the image to page
-savedArr.forEach(save => {
-  let saveHolder = document.createElement('div')
-  saveHolder.classList = ("saveHolder")
-  let saveImg = document.createElement('img');
-  // set the img src to url from images object at the key of this saves value
-  saveImg.src = images[save];
-  saveImg.classList.toggle("savedImage") 
-  saveHolder.appendChild(saveImg)
-  savesHere.appendChild(saveHolder)
-})
+// func to itterate the saved Array and forEach entry create and append the image to page
+const buildSaved = () => {
+  savedArr.forEach(save => {
+    let saveHolder = document.createElement('div')
+    saveHolder.classList = ("saveHolder")
+    let saveImg = document.createElement('img');
+    // set the img src to url from images object at the key of this saves value
+    saveImg.src = images[save];
+    saveImg.classList.toggle("savedImage") 
+    saveHolder.appendChild(saveImg)
+    savesHere.appendChild(saveHolder)
+  })
+}
 
 // Take comments save to array & acknowledge
-
+const confirmComments = () => {
+  let comment = document.querySelector('#comments').value;
+  alert(`Many thanks for your words - ${comment}`)
+}
 
 
 // Acknowledge contact form submit
+// Built into html
 
+
+
+// Re-build portfolio page likes upon revisit
+// onload -> itterate the savedArr and add "saved" class to saved projects.
+
+function resetSaves() {
+  getStore();
+  savedArr.forEach(save => {
+    // toggle class noSave to yesSave
+    let el = document.querySelector(`#${save} :nth-child(2)`)
+    el.classList.toggle("noSave");
+    el.classList.toggle("yesSave");
+    })
+}

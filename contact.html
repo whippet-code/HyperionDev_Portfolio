@@ -35,6 +35,10 @@
             <a href="https://www.hyperiondev.com/portfolio/116527/"><img src="./images/icons8-h-key-50.png" alt="Bootcamp link"></a>
             <h2>HyperionDev</h2>
           </div>
+          <div class="link">
+            <a href="./saved.html"><img src="./images/icons8-bookmark-24 (1).png" alt="Bookmark link"></a>
+            <h2>Saved</h2>
+          </div>
         </div>
         <div class="sayhi">
           <a href="./contact.html">
@@ -47,12 +51,12 @@
         <div class="cards">
           <div class="card-form">
             <div class="form">
-              <form action="#">
+              <form>
                 <label for="name">Who you?</label><br>
-                <input type="text" name="name" id="name" placeholder="Name"><br>
+                <input type="text" name="name" id="name" placeholder="Name" autocomplete="off" required><br>
 
-                <label for="email">Where I'll find you?</label><br>
-                <input type="text" name="email" id="email" placeholder="E-mail"><br>
+                <label for="email" >Where I'll find you?</label><br>
+                <input type="text" name="email" id="email" placeholder="E-mail" autocomplete="off" required><br>
 
                 <label for="option">How did you find me?</label><br>
                 <select name="option" id="option">
@@ -66,9 +70,9 @@
                 <label for="message">Words of wisdom and kindness happily accepted.</label><br>
                 <textarea name="message" id="message" cols="50" rows="4" placeholder="Write nice things here."></textarea><br>
 
-                <input class="radio" type="radio" name="signup" id="signup"><label for="signup">Subscribe to news.</label><br>
+                <input class="checkbox" type="checkbox" name="signup" id="signup"><label for="signup">Subscribe to news.</label><br>
 
-                <input class="submit" type="submit" value="Say Hi!">
+                <input class="submit" type="submit" value="Say hi!" onclick="alert(`Hi! Thanks for reaching out. I'll be in touch soon.`)">
                 
               </form>
             </div>
