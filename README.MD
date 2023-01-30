@@ -4,10 +4,10 @@ Developer portfolio site. Built during a web dev bootcamp as the course progress
 
 ## _Sections_
 
-### _[Section 1](#section1)_ - Installation
-### _[Section 2](#section2)_ - Usage
-### _Section 3_ - Build updates
-### _[Section 4](#section4)_ - Coming updates
+### _[Section 1](#section-1)_ - Installation
+### _[Section 2](#section-2)_ - Usage
+### _[Section 3](#section-3)_ - Build updates
+### _[Section 4](#section-4)_ - Coming updates
 
 ## Section 1
 ### Installation
