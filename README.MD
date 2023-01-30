@@ -4,10 +4,10 @@ Developer portfolio site. Built during a web dev bootcamp as the course progress
 
 Contents -
 
-1. Installation
-2. Usage
-3. Build updates
-4. Coming updates
+1. Section 1 - Installation
+2. Section 2 - Usage
+3. Section 3 - Build updates
+4. Section 4 - Coming updates
 
 ## Section 1
 ### Installation
