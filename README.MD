@@ -2,12 +2,12 @@
 
 Developer portfolio site. Built during a web dev bootcamp as the course progressed to showcase some of the projects built using the skills gained.
 
-## _Sections
+## _Sections_
 
-### _Section 1_ - Installation
-### _Section 2_ - Usage
+### _[Section 1](#section1)_ - Installation
+### _[Section 2](#section2)_ - Usage
 ### _Section 3_ - Build updates
-### _Section 4_ - Coming updates
+### _[Section 4](#section4)_ - Coming updates
 
 ## Section 1
 ### Installation
