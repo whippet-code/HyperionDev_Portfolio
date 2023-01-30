@@ -1,6 +1,6 @@
-_#Project Portfolio Project#_
+# _Project Portfolio Project_
 
-React based developer portfolio site. Built during a web dev bootcamp as the course progressed to showcase some of the projects built using the skills gained.
+Developer portfolio site. Built during a web dev bootcamp as the course progressed to showcase some of the projects built using the skills gained.
 
 Contents -
 
@@ -9,12 +9,25 @@ Contents -
 3. Build updates
 4. Coming updates
 
-##Section 1##
-###Installation###
-##Section 2##
-###Usge###
-##Section 3##
-###Build Updates###
+## Section 1
+### Installation
+
+In order to run this on your local machine please carry out the following steps.
+
+1. Clone the repo to your machine.
+2. Navigate to the folder on your machine and open home.html in your browser.
+
+
+## Section 2
+### Usage
+
+![Project Screenshot](https://github.com/whippet-code/HyperionDev_Portfolio/blob/41d3e6dcefa5bbebe372b557ab4101c812952ac3/images/Portfolio.png)
+
+Projects page allows liking and saving of projects with section for comments.
+
+
+## Section 3
+### Build Updates
 Task 42 - Update build - 27 Jan 23
 
 Added like & save function to portfolio page. Accessed via clicking on portfolio items on home page.
@@ -24,6 +37,6 @@ Contact page & comments section to saved page added with confirmation of submit.
 
 Restyled site, and polished up a couple of other bits.
 
-##Section 4##
-###Coming Updates###
+## Section 4
+### Coming Updates
 TODO - Folder/structure tidy. Liked projects store/rebuild. CV link
